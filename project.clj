@@ -7,7 +7,9 @@
                  [om "0.6.2"]
                  [ankha "0.1.2"]
                  [sablono "0.2.16"]
-                 ;[com.cemerick/clojurescript.test "0.3.0"] 
+                 [com.cemerick/clojurescript.test "0.3.0"] 
+                 [midje "1.6.0"]
+                 [org.clojure/test.check "0.5.8"]
                  [com.cemerick/piggieback "0.1.3"]
                  ]
   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
