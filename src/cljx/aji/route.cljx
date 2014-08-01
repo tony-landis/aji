@@ -81,6 +81,8 @@
           ]
       ;(prn a-is-child a-is-parent a-is-sibling) 
       ;(when meta-b)
+
+      ; handle service logic
       (swap! a 
              (fn [x] 
                (-> ; set the new path
@@ -103,14 +105,15 @@
                           #(merge % {:vi-focus false :vi-focus-in false })
                           map? ; pass over non-map nodes
                           #(some #{:vi-focus-in :vi-focus} (keys %)) ; pass over
-                          ))))
-                   ; handle services logic
-                   ((fn [x]
-                      (if-not svc-b x ; no service here
-                        ; a service exists, reload meta
-                        (assoc-in x (butlast path-b)
-                                  (aji.service/run meta-b path-b) ))))
-                   ))))))
+                          )))) )))
+
+
+      ; services
+      (when (and svc-b                         ; service exists
+                 (= nil (:load-state meta-b))) ; fetch data just once 
+        (aji.service/run a (butlast path-b) meta-b (last path-b)))
+      
+      )))
 
 
 

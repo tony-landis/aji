@@ -35,11 +35,12 @@
        (let []
          (util/walk-update-in app 
                               [:routes 0 :routes 1]
-                              #(merge % {:test true})
-           map?) => (-> app
-                        (update-in [:routes 0] #(merge % {:test true}))
-                        (update-in [:routes 0 :routes 1] #(merge % {:test true}))
-                        )))
+                              #(merge % {:test true}) 
+                              map?)
+         => (-> app
+                (update-in [:routes 0] #(merge % {:test true}))
+                (update-in [:routes 0 :routes 1] #(merge % {:test true}))
+                )))
 
 (facts "about find-pred-path"
        ; is this actually being used?

@@ -1,0 +1,245 @@
+#wrap {
+  margin: 0; }
+
+aside#nav-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  border-right: 1px solid #e1e1e1;
+  z-index: 1;
+  margin: 0; }
+  aside#nav-left ul, aside#nav-left li {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  aside#nav-left ul {
+    width: 50px;
+    height: 100%; }
+  aside#nav-left li {
+    height: 50px;
+    width: 50px;
+    cursor: pointer; }
+    aside#nav-left li .nav-left-vi {
+      font-size: 13px;
+      padding: 2px;
+      position: relative;
+      bottom: 52px;
+      left: 2px;
+      color: #999999;
+      z-index: -1; }
+    aside#nav-left li a {
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      border-bottom: 1px solid #e1e1e1;
+      display: block;
+      text-align: center;
+      opacity: 0.3; }
+    aside#nav-left li a.active {
+      opacity: 1;
+      background-color: #ff5000;
+      transition: background-color 0.3s ease-out;
+      border-bottom: 1px solid #ff5000; }
+    aside#nav-left li a.vi-parent {
+      opacity: 0.3;
+      transition: opacity 0.2s ease-in;
+      background-color: #ff5000;
+      border-bottom: 1px solid #ff5000; }
+    aside#nav-left li a:hover {
+      opacity: 0.8;
+      transition: opacity 0.2s ease-in; }
+    aside#nav-left li a i {
+      position: relative;
+      top: 2px;
+      left: 11px; }
+
+#main {
+  position: absolute;
+  height: 100%;
+  left: 50px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  *height: auto;
+  *margin-left: 60px;
+  *position: static; }
+  #main > .container {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    *display: block;
+    *overflow: hidden; }
+
+#main-search {
+  display: table-row;
+  width: 100%; }
+
+#search-container {
+  position: fixed;
+  top: 0;
+  left: 50;
+  border-bottom: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  max-width: 400px; }
+  #search-container .search-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%; }
+  #search-container .search-cell {
+    vertical-align: middle;
+    text-align: center;
+    border: 0 none;
+    display: table-cell;
+    vertical-align: top; }
+  #search-container .left {
+    width: 100%; }
+  #search-container .right {
+    width: 40px;
+    padding-top: 5px; }
+  #search-container input[type=text] {
+    color: #ff5000;
+    border: 0 none;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    padding: 0 24px;
+    font-size: 24px; }
+    #search-container input[type=text]:focus {
+      outline: none; }
+  #search-container button {
+    color: #ff5000;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    position: relative;
+    background: white;
+    padding: 6px 10px;
+    font-size: 20px;
+    line-height: 20px;
+    border-radius: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
+    #search-container button:focus {
+      outline: none; }
+    #search-container button:hover, #search-container button:focus {
+      color: #222222;
+      text-decoration: none; }
+    #search-container button:active {
+      outline: 0;
+      background-image: none;
+      top: 1px; }
+    #search-container button.btn-clear {
+      margin-top: -3px; }
+    #search-container button.btn-reset {
+      color: #cb1530;
+      font-size: 14px;
+      border-left: 1px solid #eeeeee; }
+      #search-container button.btn-reset:hover, #search-container button.btn-reset:focus {
+        color: #b4122a;
+        text-decoration: none; }
+
+.menu-ul {
+  position: fixed;
+  top: 63px;
+  left: 60px;
+  min-width: 150px;
+  border: 1px solid #e1e1e1;
+  border-top: 0;
+  z-index: 99999;
+  background-color: white;
+  -webkit-border-radius: 7px;
+  border-radius: 3px;
+  -webkit-box-shadow: 2px 2px 4px 1px #eeeeee;
+  box-shadow: 2px 2px 4px 1px #eeeeee;
+  transition: width 0.1s ease-in; }
+  .menu-ul .search-left {
+    position: absolute;
+    top: 10px;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #dddddd; }
+  .menu-ul .search-up {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #dddddd;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent; }
+  .menu-ul .search-footer {
+    padding: 10px;
+    background-color: #eeeeee;
+    border-top: 1px solid #dddddd;
+    color: #777777; }
+  .menu-ul ul, .menu-ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  .menu-ul ul {
+    height: 100%; }
+  .menu-ul li {
+    padding: 10px;
+    border-top: 1px solid #e1e1e1;
+    cursor: pointer;
+    border-bottom: 1px solid white; }
+  .menu-ul li.active {
+    background-color: #dbf8ff;
+    border-bottom: 1px solid #dbf8ff; }
+    .menu-ul li.active a {
+      font-weight: bold;
+      cursor: pointer; }
+
+#quick-detail {
+  position: absolute;
+  right: 0px;
+  width: 398px;
+  z-index: 999; }
+  #quick-detail > a {
+    padding: 0;
+    padding-top: 10px;
+    margin: 0;
+    display: block;
+    float: left;
+    background: white;
+    border: 1px solid #eeeeee;
+    border-right: 0 none;
+    border-top: 0 none;
+    width: 28px;
+    height: 50px;
+    -webkit-box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.15); }
+  #quick-detail > aside {
+    background: white;
+    border: 1px solid #eeeeee;
+    border-top: 0 none;
+    margin-left: 28px;
+    -webkit-box-shadow: -2px 2px 2px #eeeeee;
+    box-shadow: -2px 2px 2px #eeeeee; }
+    #quick-detail > aside header {
+      height: 50px;
+      padding: 10px 20px; }
+      #quick-detail > aside header h1, #quick-detail > aside header h2, #quick-detail > aside header h3, #quick-detail > aside header h4 {
+        margin: 0px; }
+    #quick-detail > aside section {
+      border-top: 1px solid #e1e1e1;
+      padding: 10px 20px; }

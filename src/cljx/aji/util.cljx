@@ -58,9 +58,7 @@
 
 
 (defn get-parent [m path]
-  "
-  get node above the closes vector
-  "
+  "get node above the closes vector "
   (let [root-path (take 1 path)] ; dont return nil 
     (loop [p (butlast path)]
       (if (empty? p)
@@ -118,7 +116,10 @@
 (defn owner-path [owner]
   "get the path of the cursor "
   (let [cursor (.-__om_cursor (.-props owner))
-        path (or (.-path cursor) [])
+        path (if cursor
+              (.-path cursor)
+              (do (prn "ERROR: aji.util/owner-path: no cursor for owner: " owner)
+                  []))
         k (or (.-key (.-props owner)) [])]
     ;(prn  (into [] (flatten (conj path k))))
     (into [] (flatten (conj path k)))))

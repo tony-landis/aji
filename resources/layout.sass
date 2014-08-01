@@ -1,0 +1,323 @@
+
+
+$brown: rgb(62, 34, 15)
+$green: rgb(94, 118, 46)
+$grey:  rgb(186, 186, 186)
+$dark-grey: rgb(109, 109, 109)
+$hr-color: rgb(230,230,230)
+// stuff perhaps to cleanup a bit
+//
+$blue:  #336699
+$light-blue: rgb(219, 248, 255)
+$bright-blue: rgb(219, 248, 255)
+// used for costa rica only?
+//
+$orange: #ff5000
+$dark-orange: #ff2a00
+
+
+#wrap
+  //position: relative
+  //height: 100%
+  //*height: auto
+  //width: 100%
+  //min-height: 324px
+  margin: 0
+
+
+aside#nav-left
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  width: 50px
+  border-right: 1px solid #e1e1e1
+  z-index: 1
+  margin: 0
+  ul, li
+    padding: 0
+    margin: 0
+    list-style: none
+  ul
+    width: 50px
+    height: 100%
+  li
+    height: 50px
+    width:  50px
+    cursor: pointer
+    .nav-left-vi
+      font-size: 13px
+      padding: 2px
+      position: relative
+      bottom: 52px
+      left: 2px
+      color: #999
+      z-index: -1
+      //width: 12px
+      //height: 12px
+    a
+      text-align: center
+      width: 50px
+      height: 50px
+      //background-color: #444
+      border-bottom: 1px solid #e1e1e1
+      display: block
+      text-align: center
+      //margin: 11px
+      opacity: .3
+
+    a.active
+      opacity: 1
+      //transition: opacity 1s ease-in
+
+      background-color: $orange
+      transition: background-color .3s ease-out
+
+      border-bottom: 1px solid $orange
+
+    a.vi-parent
+      opacity: .3
+      transition: opacity .2s ease-in 
+
+      background-color: $orange
+      border-bottom: 1px solid $orange
+
+    a:hover
+      opacity: .8
+      transition: opacity .2s ease-in 
+
+    a i
+      position: relative
+      top: 2px
+      left: 11px
+
+
+
+#main
+  position: absolute
+  height: 100%
+  left: 50px
+  right: 0
+  top: 0
+  bottom: 0
+  *height: auto
+  *margin-left: 60px
+  *position: static
+  > .container
+    border-collapse: collapse
+    border-spacing: 0
+    display: table
+    table-layout: fixed
+    width: 100%
+    height: 100%
+    *display: block
+    *overflow: hidden
+
+
+#main-search
+  display: table-row
+  //*display: block
+  width: 100%
+
+#search-container
+  position: fixed
+  top: 0
+  left: 50
+  border-bottom: 1px solid #e1e1e1
+  border-right: 1px solid #e1e1e1
+  max-width: 400px
+
+  .search-table
+    border-collapse: collapse
+    border-spacing: 0
+    display: table
+    table-layout: fixed
+    width: 100%
+    height: 100%
+    //*display: block
+    //*overflow: hidden
+
+  .search-cell
+    vertical-align: middle
+    text-align: center
+    border: 0 none
+    display: table-cell
+    vertical-align: top
+    //*display: block
+
+  .left
+    width: 100%
+  .right
+    width: 40px
+    padding-top: 5px
+
+  input[type=text]
+    color: $orange
+    //text-decoration: underline
+    border: 0 none
+    height: 50px
+    line-height: 50px
+    width: 100%
+    padding: 0 24px
+    font-size: 24px
+    &:focus
+      outline: none
+      //border-bottom: 1px solid $orange
+
+  button
+    color: $orange
+    display: inline-block
+    //*display: inline
+    //*zoom: 1
+    margin-bottom: 0
+    text-align: center
+    vertical-align: middle
+    cursor: pointer
+    background-image: none
+    border: 1px solid transparent
+    white-space: nowrap
+    position: relative
+    background: #fff
+    padding: 6px 10px
+    font-size: 20px
+    line-height: 20px
+    border-radius: 0
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    -o-user-select: none
+    user-select: none
+    &:focus
+      outline: none
+    &:hover, &:focus
+      color: #222222
+      text-decoration: none
+    &:active
+      outline: 0
+      background-image: none
+      top: 1px
+    &.btn-clear
+      margin-top: -3px
+    &.btn-reset
+      color: #cb1530
+      font-size: 14px
+      border-left: 1px solid #eeeeee
+      &:hover, &:focus
+        color: #b4122a
+        text-decoration: none
+
+
+.menu-ul
+  position: fixed
+  top: 63px
+  left: 60px
+  //bottom: 0
+  min-width: 150px
+  border: 1px solid #e1e1e1
+  //border: 1px solid $orange // #e1e1e1
+  border-top: 0
+  z-index: 99999
+  background-color: #fff
+
+  -webkit-border-radius: 7px
+  border-radius: 3px
+  -webkit-box-shadow: 2px 2px 4px 1px #eee
+  box-shadow: 2px 2px 4px 1px #eee
+
+  transition: width .1s ease-in
+  
+  .search-left
+    position: absolute
+    top: 10px
+    left: -8px
+    width: 0 
+    height: 0
+    border-top: 8px solid transparent
+    border-bottom: 8px solid transparent
+    border-right: 8px solid #ddd
+
+  .search-up
+    position: absolute
+    top: -10px
+    left: 10px
+    width: 0
+    height: 0
+    border-bottom: 10px solid #ddd
+    border-left: 5px solid transparent
+    border-right: 5px solid transparent 
+
+  .search-footer
+    padding: 10px
+    background-color: #eee
+    border-top: 1px solid #ddd
+    color: #777
+
+  ul, li
+    padding: 0
+    margin: 0
+    list-style: none
+  ul
+    height: 100%
+  li
+    padding: 10px
+    border-top: 1px solid #e1e1e1
+    cursor: pointer
+    border-bottom: 1px solid #fff
+  li.active
+    background-color: $light-blue //$orange
+    border-bottom: 1px solid $light-blue // $orange
+    //transition: background-color .1s ease-out 
+    //transition: background-color .1s ease-out
+    a
+      //color: 
+      font-weight: bold
+      cursor: pointer
+
+
+
+
+
+
+
+#quick-detail
+  position: absolute
+  right: 0px
+  width: 398px
+  z-index: 999
+  >
+    a
+      padding: 0
+      padding-top: 10px
+      margin: 0
+      display: block
+      float: left
+      background: #fff
+      border: 1px solid #eeeeee
+      border-right: 0 none
+      border-top: 0 none
+      width: 28px
+      height: 50px
+      -webkit-box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.15)
+      box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.15)
+    aside
+      background: #fff
+      border: 1px solid #eeeeee
+      border-top: 0 none
+      //padding: 10px 20px
+      margin-left: 28px
+      -webkit-box-shadow: -2px 2px 2px #eee
+      box-shadow: -2px 2px 2px #eee
+      header
+        height: 50px
+        padding: 10px 20px
+        h1,h2,h3,h4 
+          margin: 0px
+      section
+        border-top: 1px solid #e1e1e1
+        padding: 10px 20px
+
+  //&.open > a
+  //  i
+  //    background-position: -96px -336px
+  //  &:hover i
+  //    background-position: -110px -336px
